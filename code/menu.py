@@ -5,7 +5,7 @@ from Level import Level
 
 
 class Menu(Level):
-    def __init__(self):
+    def __init__(self, window):
         self.Attribute1 = None
         self.window = None
 
