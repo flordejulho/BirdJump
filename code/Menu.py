@@ -4,7 +4,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH
+from code.Const import WIN_WIDTH, COLOR_BLACK, MENU_OPTION, COLOR_GREEN
 
 
 class Menu:
@@ -13,12 +13,19 @@ class Menu:
         self.surf = pygame.image.load('./asset/menuBG.png')
         self.rect = self.surf.get_rect(left=0, top=0)
 
+
+
     def run(self, ):
         pygame.mixer_music.load('./asset/somBG.wav')
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "*** BIRD JUMP ***", (0, 0, 0), ((WIN_WIDTH / 2), 70))
+            self.menu_text(80, "*** BIRD JUMP ***", COLOR_BLACK, ((WIN_WIDTH / 2), 70))
+            self.menu_text(50, "*** DEMO ***", COLOR_BLACK, ((WIN_WIDTH / 2), 130))
+
+            for i in range(len(MENU_OPTION)):
+                self.menu_text(25, MENU_OPTION[i], COLOR_GREEN, ((WIN_WIDTH / 2), 200 + 30 * i))
+
             pygame.display.flip()
 
             # check for all event
