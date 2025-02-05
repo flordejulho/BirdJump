@@ -2,9 +2,10 @@
 #C
 COLOR_BLACK = (0, 0, 0)
 COLOR_GREEN = (71, 254, 255)
+COLOR_WHITE = (255, 255,255)
 # M
 
-MENU_OPTION = ('DEMO NEW PLAYER 1',
+MENU_OPTION = ('NEW PLAYER 1',
                'SCORE',
                'EXIT')
 # W
