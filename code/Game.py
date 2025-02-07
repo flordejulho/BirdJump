@@ -4,7 +4,8 @@
 import pygame
 
 from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
-from code.Gevel import Level
+from code.Level import Level
+
 from code.Menu import Menu
 
 
@@ -21,8 +22,9 @@ class Game:
             menu_return = menu.run()
 
             if menu_return == MENU_OPTION[0]:
-                leve = Level(self.window, 'Level1', menu_return)
-                pass
+                level = Level(self.window, 'fase1im', menu_return)
+                level_return = level.run()
+
             elif menu_return == MENU_OPTION[2]:
                 pygame.quit()  # quit window fechamento janela
                 quit()
