@@ -22,7 +22,7 @@ class Game:
             menu_return = menu.run()
 
             if menu_return == MENU_OPTION[0]:
-                level = Level(self.window, 'fase1im', menu_return)
+                level = Level(self.window, 'Level1Bg', menu_return)
                 level_return = level.run()
 
             elif menu_return == MENU_OPTION[2]:
