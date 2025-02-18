@@ -8,12 +8,14 @@ from random import choice
 
 import pygame
 from pygame import Surface, Rect
+from pygame.examples.aliens import Score
 from pygame.font import Font
 
 from code.Const import COLOR_WHITE, WIN_HEIGHT, EVENT_ENEMY, SPAWN_TIME
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
+from code.Player import Player
 
 
 class Level:
@@ -38,6 +40,9 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Player - Health: {ent.health} | Score: {ent.score}' , COLOR_WHITE, (10, 25))
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -45,6 +50,9 @@ class Level:
                 if event.type == EVENT_ENEMY:
                     choice = random.choice(('Enemy1', 'Enemy2', 'Enemy3'))
                     self.entity_list.append(EntityFactory.get_entity(choice))
+
+
+
             # printed text
             self.level_text(14, f'{self.name} = Timeout: {self.timeout / 1000 :.1f}', COLOR_WHITE, (10,5))
             self.level_text(14, f'fds: {clock.get_fps() :.0f}', COLOR_WHITE, (10, WIN_HEIGHT - 35))

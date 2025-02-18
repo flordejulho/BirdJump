@@ -5,6 +5,7 @@ import pygame.key
 from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH
 from code.Entity import Entity
 
+
 class Player(Entity):
     def __init__(self, name: str, position: tuple):
         super().__init__(name, position)
@@ -17,7 +18,7 @@ class Player(Entity):
     def move(self):
         pressed_key = pygame.key.get_pressed()
 
-        # Movimento para frente/trás
+        # Movimento para frente/tráz
         if pressed_key[pygame.K_LEFT] and self.rect.left > 0:
             self.rect.x -= ENTITY_SPEED[self.name]  # Move para trás
         if pressed_key[pygame.K_RIGHT] and self.rect.right < WIN_WIDTH:
