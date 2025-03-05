@@ -9,7 +9,8 @@ COLOR_WHITE = (255, 255,255)
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
 
-ENTITY_DAMAGE = { 'Level1Bg0': 0,
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 0,
     'Level1Bg3': 0,
@@ -29,7 +30,7 @@ ENTITY_DAMAGE = { 'Level1Bg0': 0,
 }
 
 ENTITY_SCORE = {
-'Level1Bg0': 0,
+    'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 0,
     'Level1Bg3': 0,
@@ -48,7 +49,7 @@ ENTITY_SCORE = {
 }
 
 ENTITY_HEALTH = {
-'Level1Bg0': 999,
+    'Level1Bg0': 999,
     'Level1Bg1': 999,
     'Level1Bg2': 999,
     'Level1Bg3': 999,
@@ -82,7 +83,6 @@ ENTITY_SPEED = {
     'Enemy1': 3,
     'Enemy2': 5,
     'Enemy3': 3,
-
 }
 EVENT_ENEMY = pygame.USEREVENT + 1
 EVENT_TIMEOUT = pygame.USEREVENT + 2
@@ -91,18 +91,35 @@ EVENT_TIMEOUT = pygame.USEREVENT + 2
 
 MENU_OPTION = ('NEW PLAYER 1',
                'SCORE',
-
                'EXIT')
 
 
 # S
 SPAWN_TIME = 2000
 
+
 # T
-TIMEOUT_LEVEL = 20000 #20ms
+TIMEOUT_LEVEL = 50000   #20ms
 TIMEOUT_STEP = 100 #100ms
 
 
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# S
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH /2, 110),
+             1: (WIN_WIDTH /2, 130),
+             2: (WIN_WIDTH /2, 150),
+             3: (WIN_WIDTH /2, 170),
+             4: (WIN_WIDTH /2, 190),
+             5: (WIN_WIDTH /2, 210),
+             6: (WIN_WIDTH /2, 230),
+             7: (WIN_WIDTH /2, 250),
+             8: (WIN_WIDTH /2, 270),
+             9: (WIN_WIDTH /2, 290)
+             }
