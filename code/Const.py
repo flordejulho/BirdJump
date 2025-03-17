@@ -44,8 +44,8 @@ ENTITY_SCORE = {
     'Level2Bg6': 0,
     'Player1' : 0,
     'Enemy1': 10,
-    'Enemy2': 50,
-    'Enemy3': 60,
+    'Enemy2': 10,
+    'Enemy3': 10,
 }
 
 ENTITY_HEALTH = {
@@ -61,8 +61,8 @@ ENTITY_HEALTH = {
     'Level2Bg4': 999,
     'Level2Bg5': 999,
     'Level2Bg6': 999,
-    'Player1' : 300,
-    'Enemy1': 10,
+    'Player1' : 200,
+    'Enemy1': 40,
     'Enemy2': 50,
     'Enemy3': 60,
 }
@@ -79,13 +79,14 @@ ENTITY_SPEED = {
     'Level2Bg4': 4,
     'Level2Bg5': 1,
     'Level2Bg6': 4,
-    'Player1' : 3,
+    'Player1' : 4,
     'Enemy1': 3,
     'Enemy2': 5,
     'Enemy3': 3,
 }
 EVENT_ENEMY = pygame.USEREVENT + 1
 EVENT_TIMEOUT = pygame.USEREVENT + 2
+
 
 # M
 
@@ -99,7 +100,7 @@ SPAWN_TIME = 2000
 
 
 # T
-TIMEOUT_LEVEL = 50000   #20ms
+TIMEOUT_LEVEL = 40000   #20ms
 TIMEOUT_STEP = 100 #100ms
 
 

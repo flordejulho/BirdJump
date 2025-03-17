@@ -70,7 +70,7 @@ class Score:
 
         for player_score in list_score:
             id_, name, score, date = player_score
-            self.score_text(20, f'{name}         {score : 05d}        {date}' , COLOR_BLACK,
+            self.score_text(20, f'{name}         {score : 05d}        {date}' , COLOR_GREEN,
                             SCORE_POS[list_score.index(player_score)])
 
         while True:
